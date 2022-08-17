@@ -1,9 +1,9 @@
 import * as React from "react";
 
-const MyReactComponent = () =>{
+const MyReactComponent = () => {
     return (
         <div id="hello">
-            <h1>Hello World als React Komponente</h1>
+            <h1 className="Ureact"> <u>React Formular BubblyDoo Wrapper</u></h1>
         </div>
     )
 }
