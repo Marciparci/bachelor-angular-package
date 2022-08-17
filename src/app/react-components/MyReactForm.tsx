@@ -2,7 +2,6 @@ import * as React from 'react';
 import { BubblyService } from '../bubbly-service.service';
 
 class MyReactForm extends React.Component {
-    // Konstruktor muster
 
     handleSubmit(event: { preventDefault: () => void; }) {
         event.preventDefault();
@@ -10,7 +9,7 @@ class MyReactForm extends React.Component {
         console.log("submitted React");
         BubblyService.getInputValues(framework);
 
-        //TSX Syntax für HTMLInputElement
+        //TSX Syntax für HTMLInputElement + Alte Variante der Datenbindung direkt über das Formular
         // let reactText = (document.getElementById("text") as HTMLInputElement).value;
         // (document.getElementById("Atext") as HTMLInputElement).value = reactText;
 

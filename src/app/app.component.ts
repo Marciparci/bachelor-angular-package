@@ -11,15 +11,21 @@ import MyReactForm from './react-components/MyReactForm';
 
 export class AppComponent {
   title = 'bachelor-angular-package';
+
+  // Zuweisen um Komponente im BubblyDoo Wrapper nutzbar zu machen
   MyReactComponent = MyReactComponent;
   MyReactForm = MyReactForm;
+
+  // Platzhalter Array erschaffen für leichtere Datenbindung
   inputs: any = [];
 
 
   constructor(private httpClient: HttpClient){}
+
+  // Funktion löst beim Ersten Initialisieren der Anwendung aus
   ngOnInit(){
+    // HTTP Anfrage um Daten aus einer JSON Datei zu erhalten
     this.httpClient.get("assets/data.json").subscribe(data =>{
-      console.log(data);
 
       // umlagern in Array um leichter an Eigenschaften zu kommen
       this.inputs = data;
