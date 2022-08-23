@@ -17,7 +17,7 @@ export class FormComponent {
     date: '2022-08-09'
   })
 
-  // Initalisieren des bubbyServices
+  // Initalisieren des bubblyServices
   constructor(
     private formBuilder: FormBuilder,
     private bubblyService: BubblyService
@@ -35,16 +35,6 @@ export class FormComponent {
     // Aufruf des Services und der Funktion "consoleTest"
     // Syntax nach Angular Standard
     this.bubblyService.consoleTest();
-
-    // Alte Variante der Datenbindung direkt über das Formular
-    // let angularText = (<HTMLInputElement>document.getElementById("Atext")).value;
-    // (<HTMLInputElement>document.getElementById("text")).value = angularText;
-
-    // let angularNumber = (<HTMLInputElement>document.getElementById("Anumber")).value;
-    // (<HTMLInputElement>document.getElementById("number")).value = angularNumber;
-
-    // let angularDate = (<HTMLInputElement>document.getElementById("Adate")).value;
-    // (<HTMLInputElement>document.getElementById("date")).value = angularDate;
   }
 
 }

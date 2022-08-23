@@ -3,26 +3,18 @@ import { BubblyService } from '../bubbly-service.service';
 
 class MyReactForm extends React.Component {
 
+    // Funktion löst beim Absenden des Formulars aus
     handleSubmit(event: { preventDefault: () => void; }) {
+        // Seite Neuladen unterdrücken
         event.preventDefault();
+        // Aufruf des Services mit Parameter des React Formulars
         let framework = "react";
-        console.log("submitted React");
         BubblyService.getInputValues(framework);
-
-        //TSX Syntax für HTMLInputElement + Alte Variante der Datenbindung direkt über das Formular
-        // let reactText = (document.getElementById("text") as HTMLInputElement).value;
-        // (document.getElementById("Atext") as HTMLInputElement).value = reactText;
-
-        // let reactNumber = (document.getElementById("number") as HTMLInputElement).value;
-        // (document.getElementById("Anumber") as HTMLInputElement).value = reactNumber;
-
-        // let reactDate = (document.getElementById("date") as HTMLInputElement).value;
-        // (document.getElementById("Adate") as HTMLInputElement).value = reactDate;
     }
 
     override render(): React.ReactNode {
         return (
-            // HTML Aufbau für das Form
+            // HTML Aufbau für das React Formular
             <div className='center'>
                 <form onSubmit={this.handleSubmit}>
                     <div className='formDiv'>
